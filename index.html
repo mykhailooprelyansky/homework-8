@@ -19,44 +19,59 @@
     <!-- header -->
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <a href="./index.html" class="logo header__logo">
-            <span class="logo--blue">Web</span>Studio
-          </a>
-          <ul class="header__site-nav">
-            <li class="header__site-item">
-              <a href="./index.html" class="link header__site-link header__site-link--current">
-                Студия
-              </a>
-            </li>
-            <li class="header__site-item">
-              <a href="./portfolio.html" class="link header__site-link">Портфолио</a>
-            </li>
-            <li class="header__site-item">
-              <a href="#" class="link header__site-link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header__address">
-          <ul class="header__contact">
-            <li class="header__contact-item">
-              <a href="mailto:info@devstudio.com" class="link header__contact-link">
-                <svg class="header__mail-icon">
-                  <use href="./image/sprite.svg#e-mail"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="header__contact-item">
-              <a href="tel:+380961111111" class="link header__contact-link">
-                <svg class="header__phone-icon">
-                  <use href="./image/sprite.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </address>
+        <a href="./index.html" class="logo header__logo">
+          <span class="logo--blue">Web</span>Studio
+        </a>
+        <button
+          class="header__menu"
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="header__menu-button" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./image/sprite.svg#menu-nav-menu"></use>
+            <use class="icon-close" href="./image/sprite.svg#close-nav-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header__nav">
+            <ul class="header__site-nav">
+              <li class="header__site-item">
+                <a href="./index.html" class="link header__site-link header__site-link--current">
+                  Студия
+                </a>
+              </li>
+              <li class="header__site-item">
+                <a href="./portfolio.html" class="link header__site-link">Портфолио</a>
+              </li>
+              <li class="header__site-item">
+                <a href="#" class="link header__site-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header__address">
+            <ul class="header__contact">
+              <li class="header__contact-item">
+                <a href="mailto:info@devstudio.com" class="link header__contact-link">
+                  <svg class="header__mail-icon">
+                    <use href="./image/sprite.svg#e-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="header__contact-item">
+                <a href="tel:+380961111111" class="link header__contact-link">
+                  <svg class="header__phone-icon">
+                    <use href="./image/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
 
@@ -174,7 +189,12 @@
           <h2 class="user__title">Наша команда</h2>
           <ul class="user__list">
             <li class="user__item">
-              <img class="user__photo" src="./image/man1.jpg" alt="Игорь Демьяненко" />
+              <img
+                class="user__photo"
+                src="./image/man1.jpg"
+                width="270px"
+                alt="Игорь Демьяненко"
+              />
               <h3 class="user__name">Игорь Демьяненко</h3>
               <p class="user__desc">Product Designer</p>
               <ul class="social-list social-list__user">
@@ -209,7 +229,7 @@
               </ul>
             </li>
             <li class="user__item">
-              <img class="user__photo" src="./image/man2.jpg" alt="Ольга Репина" />
+              <img class="user__photo" src="./image/man2.jpg" width="270px" alt="Ольга Репина" />
               <h3 class="user__name">Ольга Репина</h3>
               <p class="user__desc">Frontend Developer</p>
               <ul class="social-list">
@@ -244,7 +264,7 @@
               </ul>
             </li>
             <li class="user__item">
-              <img class="user__photo" src="./image/man3.jpg" alt="Николай Тарасов" />
+              <img class="user__photo" src="./image/man3.jpg" width="270px" alt="Николай Тарасов" />
               <h3 class="user__name">Николай Тарасов</h3>
               <p class="user__desc">Marketing</p>
               <ul class="social-list">
@@ -279,7 +299,7 @@
               </ul>
             </li>
             <li class="user__item">
-              <img class="user__photo" src="./image/man4.jpg" alt="Михаил Ермаков" />
+              <img class="user__photo" src="./image/man4.jpg" width="270px" alt="Михаил Ермаков" />
               <h3 class="user__name">Михаил Ермаков</h3>
               <p class="user__desc">UI Designer</p>
               <ul class="social-list">
@@ -484,5 +504,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
