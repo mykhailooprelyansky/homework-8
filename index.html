@@ -22,20 +22,17 @@
         <a href="./index.html" class="logo header__logo">
           <span class="logo--blue">Web</span>Studio
         </a>
-        <button
-          class="header__menu"
-          type="button"
-          class="menu-button"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
+        <button class="header__menu" type="button" data-modal-open>
           <svg class="header__menu-button" aria-label="Переключатель мобильного меню">
             <use class="icon-menu" href="./image/sprite.svg#menu-nav-menu"></use>
-            <use class="icon-close" href="./image/sprite.svg#close-nav-menu"></use>
           </svg>
         </button>
-        <div class="menu-container" id="menu-container" data-menu>
+        <div class="header__menu-container is-hidden" data-modal>
+          <button class="header__menu-close" data-modal-close>
+            <svg class="header__menu-button">
+              <use class="icon-close" href="./image/sprite.svg#close-nav-menu"></use>
+            </svg>
+          </button>
           <nav class="header__nav">
             <ul class="header__site-nav">
               <li class="header__site-item">
@@ -62,7 +59,10 @@
                 </a>
               </li>
               <li class="header__contact-item">
-                <a href="tel:+380961111111" class="link header__contact-link">
+                <a
+                  href="tel:+380961111111"
+                  class="link header__contact-link header__contact-link--current"
+                >
                   <svg class="header__phone-icon">
                     <use href="./image/sprite.svg#smartphone"></use>
                   </svg>
@@ -71,6 +71,22 @@
               </li>
             </ul>
           </address>
+          <div class="header__social">
+            <ul class="header__social-list">
+              <li class="heder__social-item">
+                <a href="#" class="header__social-link">Instagram</a>
+              </li>
+              <li class="heder__social-item">
+                <a href="#" class="header__social-link">Twitter</a>
+              </li>
+              <li class="heder__social-item">
+                <a href="#" class="header__social-link">Facebook</a>
+              </li>
+              <li class="heder__social-item">
+                <a href="#" class="header__social-link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
