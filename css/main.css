@@ -281,7 +281,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header__contact .header__contact-item:not(:first-child) {
+  .header__contact-item:not(:first-child) {
     margin-bottom: 32px;
   }
 }
@@ -375,12 +375,79 @@ body {
   display: flex;
 }
 
+.header__social-item {
+  position: relative;
+}
+
+.header__social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header__social-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -11px;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.header__social-item:not(:first-child) {
+  margin-left: 10px;
+}
+
 .header__social-link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+.banner {
+  background-color: #2f303a;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bunner.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bunner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.banner__container {
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.banner__title {
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .banner__title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.banner__button {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .social-list {
