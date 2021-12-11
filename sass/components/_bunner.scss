@@ -1,31 +1,40 @@
 .banner {
   background-color: #2f303a;
+}
+
+.banner__container {
+  max-width: 1600px;
+  min-height: 400px;
+  margin: 0 auto 94px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../image/bunner.jpg);
+    image-set(url(../image/bunner-mobile.jpg) 1x, url(../image/bunner-mobile-2x.jpg) 2x);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   text-align: center;
-}
-.banner__container {
-  max-width: 1600px;
-  min-height: 600px;
-  margin: 0 auto 94px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(url(../image/bunner-tablet.jpg) 1x, url(../image/bunner-tablet-2x.jpg) 2x);
+  }
+  @media screen and (min-width: 1200px) {
+    min-height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(url(../image/bunner.jpg) 1x, url(../image/bunner-2x.jpg) 2x);
+  }
 }
 .banner__title {
   margin-bottom: 30px;
   color: #ffffff;
+  font-size: 26px;
   font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  @media screen and (max-width: 767px) {
-    font-size: 26px;
-    line-height: 1.62;
-  }
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
   }
