@@ -16,12 +16,11 @@
   @media screen and (min-width: 768px) {
     margin-right: 88px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
-.link {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
+
 .header__menu {
   display: inline-flex;
   margin-left: auto;
@@ -59,6 +58,7 @@
     }
   }
   @media screen and (min-width: 768px) {
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
@@ -104,7 +104,8 @@
 }
 .header__site-link {
   display: block;
-  padding-bottom: 32px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   color: $primery_text_color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -120,7 +121,6 @@
     line-height: 1.17;
   }
   @media screen and (min-width: 768px) {
-    padding-bottom: 28px;
     &--current::after {
       content: '';
       position: absolute;
@@ -140,13 +140,15 @@
   }
   @media screen and (min-width: 768px) {
     margin-left: auto;
+    margin-top: auto;
   }
 }
 .header__contact {
-  // display: flex;
-
   @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 .header__contact-item {
@@ -164,22 +166,27 @@
 .header__contact-link {
   color: $text_color;
   font-style: normal;
-
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    padding: 5px 0;
+    padding: 28px 0;
+    font-size: 12px;
+    line-height: 1.16;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
       color: $color_akcent;
     }
   }
-  @media screen and (max-width: 767px) {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .header__contact-link--current {
@@ -192,22 +199,32 @@
   }
 }
 .header__mail-icon {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
-}
-.header__phone-icon {
   @media screen and (max-width: 767px) {
     display: none;
   }
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+  }
+}
+.header__phone-icon {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+  }
 }
 .header__social {
   @media screen and (min-width: 768px) {
