@@ -22,13 +22,13 @@
         <a href="./index.html" class="logo header__logo">
           <span class="logo--blue">Web</span>Studio
         </a>
-        <button class="header__menu" type="button" data-modal-open>
+        <button class="header__menu" type="button" data-menu-open>
           <svg class="header__menu-button" aria-label="Переключатель мобильного меню">
             <use class="icon-menu" href="./image/sprite.svg#menu-nav-menu"></use>
           </svg>
         </button>
-        <div class="header__menu-container is-hidden" data-modal>
-          <button class="header__menu-close" data-modal-close>
+        <div class="header__menu-container is-hidden" data-menu>
+          <button class="header__menu-close" data-menu-close>
             <svg class="header__menu-button">
               <use class="icon-close" href="./image/sprite.svg#close-nav-menu"></use>
             </svg>
@@ -215,11 +215,11 @@
                 "
                 src="./image/man1-270.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200) 25vw, (min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="user__name">Игорь Демьяненко</h3>
               <p class="user__desc">Product Designer</p>
-              <ul class="social-list social-list__user">
+              <ul class="social-list user__social-list">
                 <li class="social-list__item">
                   <a href="#" class="social-list__link">
                     <svg class="social-list__icon">
@@ -261,11 +261,11 @@
                 "
                 src="./image/man2-270.jpg"
                 alt="Ольга Репина"
-                sizes="(min-width: 1200) 25vw, (min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="user__name">Ольга Репина</h3>
               <p class="user__desc">Frontend Developer</p>
-              <ul class="social-list">
+              <ul class="social-list user__social-list">
                 <li class="social-list__item">
                   <a href="#" class="social-list__link">
                     <svg class="social-list__icon">
@@ -307,11 +307,11 @@
                 "
                 src="./image/man3-270.jpg"
                 alt="Николай Тарасов"
-                sizes="(min-width: 1200) 25vw, (min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="user__name">Николай Тарасов</h3>
               <p class="user__desc">Marketing</p>
-              <ul class="social-list">
+              <ul class="social-list user__social-list">
                 <li class="social-list__item">
                   <a href="#" class="social-list__link">
                     <svg class="social-list__icon">
@@ -353,11 +353,11 @@
                 "
                 src="./image/man4-270.jpg"
                 alt="Михаил Ермаков"
-                sizes="(min-width: 1200) 25vw, (min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="user__name">Михаил Ермаков</h3>
               <p class="user__desc">UI Designer</p>
-              <ul class="social-list">
+              <ul class="social-list user__social-list">
                 <li class="social-list__item">
                   <a href="#" class="social-list__link">
                     <svg class="social-list__icon">
@@ -493,7 +493,7 @@
         <form class="footer__form js-speaker-form" autocomplete="off">
           <p class="footer__form-title">Подпишитесь на рассылку</p>
           <div class="footer__form-input">
-            <label
+            <label class="footer__form-label"
               ><input class="footer__input" type="email" name="email" placeholder="E-mail"
             /></label>
             <button class="button footer__form-button" type="submit">
@@ -538,7 +538,7 @@
               <use href="./image/sprite.svg#email-black"></use>
             </svg>
           </label>
-          <label class="form__field">
+          <label class="form__field-comment">
             <textarea
               class="form__field-textarea"
               name="comment"

@@ -2,9 +2,6 @@
   display: flex;
   justify-content: center;
 }
-.social-list__user {
-  margin-bottom: 30px;
-}
 .social-list__item {
   &:not(:last-child) {
     margin-right: 10px;
