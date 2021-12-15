@@ -1,0 +1,43 @@
+.portfol-button {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 94px;
+    margin-bottom: 50px;
+  }
+}
+.portfol-button__list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+.portfol-button__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    &:nth-last-child(-n + 2) {
+      margin-top: 15px;
+    }
+  }
+}
+.portfol-button__type {
+  border-radius: 4px;
+  padding: 6px 22px;
+
+  background-color: #f5f4fa;
+  color: $primery_text_color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $color_akcent;
+    color: #fff;
+  }
+}
